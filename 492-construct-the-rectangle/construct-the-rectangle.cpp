@@ -7,7 +7,7 @@ public:
         int l = 1;
         int mini = INT_MAX;
         vector<int> ans;
-        while(l<= area/2){
+        while(l<= sqrt(area)){
             if(area%l == 0){
                 int w = area/l;
                 if(abs(w-l)<mini){
