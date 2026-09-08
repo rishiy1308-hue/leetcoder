@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int countCommas(int n) {
+        if(n<1000) return 0;
+        if(n == 100000) return 99001;
+        int ndig = log10(n) +1;
+        if(ndig>=4 && ndig<=5){
+            return (n-1000+1);
+        }
+        return (2*(n-100000+1) + 99999-1000+1);
+    }
+};
